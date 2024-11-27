@@ -1,0 +1,152 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f4f7fa;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #222;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00cc99;
+}
+
+/* Section styling */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 2.8em;
+    color: #222;
+}
+
+.intro .highlight {
+    color: #007acc;
+    animation: colorChange 2s infinite;
+}
+
+/* Card styling */
+.card {
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill-card {
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.skill-card:hover {
+    background-color: #00cc99;
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+h3 {
+    color: #007acc;
+    margin-top: 15px;
+}
+
+ul {
+    text-align: left;
+    margin-top: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Animation keyframes */
+@keyframes colorChange {
+    0%, 100% {
+        color: #007acc;
+    }
+    50% {
+        color: #ff3f81;
+    }
+}
+
+/* Link styling */
+a {
+    color: #007acc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff3f81;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    .skills-container {
+        flex-direction: column; /* Stack skill cards vertically */
+    }
+
+    .intro h1 {
+        font-size: 2.2em; /* Adjust font size for mobile */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Adjust heading sizes */
+    }
+}
